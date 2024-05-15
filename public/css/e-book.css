@@ -245,7 +245,42 @@ button a{
     width: 243px;
     height: 243px;
     background-color: aqua;
+    position: relative;
 }
+/*  */
+
+
+
+.bukunya:hover {
+    background-color: #006AFA;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bukunya:hover .judull{
+    color: white;
+}
+
+.bukunya:hover .desc {
+    display: block;
+}
+
+.bukunya:hover img {
+    display: none;
+}
+
+.desc {
+    display: none; 
+}
+
+.desc p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+
+/*  */
 
 .bukunya img{
     width: 243px;
@@ -261,7 +296,7 @@ button a{
 .judull{
     margin-top: 20px;
     font-size: 17px;
-    color: white;
+    color: black;
     position: absolute;
     margin-left: 20px;
     font-weight: bold;
@@ -276,6 +311,8 @@ button a{
 }
 
 .bukunya input{
+    border-radius: 10px;
+    margin-top: 200px;
     position: absolute;
     width: 100px;
     height: 25px;

@@ -13,8 +13,8 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a href="">Buku</a>
-            <a href="">E-Book</a>
+            <a style="color: rgb(226, 226, 226)" href="{{ route('admin.home') }}">Buku</a>
+            <a href="{{ route('admin.e-book') }}">E-Book</a>
             <a href="{{ route('admin.akun') }}">Akun</a>
             <a href="">Sedang Diminta</a>
         </div>

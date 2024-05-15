@@ -34,7 +34,9 @@ Route::get('/layout/home/admin', [SiswaController::class, 'admin'])->name('admin
 Route::get('/layout/home/akun', [SiswaController::class, 'akun'])->name('admin.akun');
 Route::delete('/layout/home/{siswa}/destroy', [SiswaController::class, 'destroy'])->name('admin.destroy');
 Route::get('/layout/home/e-book', [BookController::class, 'ebook'])->name('admin.e-book');
-Route::post('/layout/home/e-book', [BookController::class, 'store'])->name('admin.e-store');
+Route::post('/layout/home/e-book', [BookController::class, 'store'])->name('admin.store');
+Route::delete('/layout/home/{siswa}/delete', [BookController::class, 'delete'])->name('admin.destroy');
+Route::get('/layout/profile', [BookController::class, 'profile'])->name('layout.profile');
 
 
 

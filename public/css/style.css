@@ -104,6 +104,48 @@
 
 }
 
+.bukunya{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 243px;
+    height: 243px;
+    background-color: aqua;
+    position: relative;
+}
+/*  */
+
+
+
+.bukunya:hover {
+    background-color: #006AFA;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bukunya:hover .judull{
+    color: white;
+}
+
+.bukunya:hover .desc {
+    display: block;
+}
+
+.bukunya:hover img {
+    display: none;
+}
+
+.desc {
+    display: none; 
+}
+
+.desc p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+
+
 .isi-buku:hover{
     background-color: #006AFA;
     color: white;

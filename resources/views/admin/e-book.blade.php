@@ -15,8 +15,8 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a href="">Buku</a>
-            <a style="color: gray" href="">E-Book</a>
+            <a href="{{ route('admin.home') }}">Buku</a>
+            <a style="color: rgb(226, 226, 226)" href="{{ route('admin.e-book') }}">E-Book</a>
             <a href="{{ route('admin.akun') }}">Akun</a>
             <a href="">Bantuan</a>
         </div>
@@ -58,11 +58,11 @@
                     </div>
 
 
-                    {{-- <form method="POST" action="{{ route('admin.destroy', ['siswa' => $item->id]) }}">
+                    <form method="POST" action="{{ route('admin.destroy', ['siswa' => $book->id]) }}">
                         @csrf
-                        @method('DELETE') --}}
+                        @method('DELETE')
                         <input type="submit" value="Delete">
-                    {{-- </form> --}}
+                    </form>
                 </div>
                 @endforeach
             </div>

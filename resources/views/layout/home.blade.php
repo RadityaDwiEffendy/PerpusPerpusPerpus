@@ -12,14 +12,14 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a style="color: gray" href="">Buku</a>
-            <a href="">E-Book</a>
+            <a href="">Buku</a>
+            <a style="color: rgb(180, 180, 180)"  href="">E-Book</a>
             <a href="">Favorit</a>
             <a href="">Sedang Diminta</a>
             <a href="">Bantuan</a>
         </div>
 
-        <button class="profile">
+        <button onclick="profile()" class="profile">
             <div class="gambar">
                 
             </div>
@@ -28,6 +28,8 @@
             <ul>
                 <li>{{ $nama_lengkap }}</li>
             </ul>
+
+            
         </button>
 
 
@@ -54,6 +56,8 @@
                 @endforeach
             </div>
         </div>
+
+        <script src="{{ asset('js/script.js') }}"></script>
 
 
 </body>

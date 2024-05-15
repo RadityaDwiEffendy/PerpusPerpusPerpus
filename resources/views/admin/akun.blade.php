@@ -14,9 +14,9 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a href="">Buku</a>
+            <a href="{{ route('admin.home') }}">Buku</a>
             <a href="{{ route('admin.e-book') }}">E-Book</a>
-            <a style="color: gray" href="{{ route('admin.akun') }}">akun</a>
+            <a style="color: rgb(226, 226, 226)" href="{{ route('admin.akun') }}">akun</a>
             <a href="">Sedang Diminta</a>
         </div>
 
