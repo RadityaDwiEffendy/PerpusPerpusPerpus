@@ -17,13 +17,10 @@ class SiswaController extends Controller
     {
         return view('layout.login');
     }
+    
 
-
-
-
-    public function admin()
-    {
-        return view('admin.home');
+    public function buatakun(){
+        return view('admin.buatakun');
     }
 
 
@@ -42,6 +39,12 @@ class SiswaController extends Controller
     }
 
 
+    public function edit(Siswas $siswa){
+        return view('admin.edit', ['siswa' => $siswa]);
+        
+    }
+
+
 
 
     public function register()
@@ -55,6 +58,33 @@ class SiswaController extends Controller
         return view('admin.akun', ['siswa' => $siswa]);
     }
 
+
+    public function update(Request $request, Siswas $siswa){
+        $data = $request->validate([
+            'id'=>'required',
+            'nama_depan'=> 'required',
+            'password' => 'required'
+        ]);
+
+        $siswa->update($data);
+        
+        return redirect(route('admin.akun'));
+    }
+
+    public function buat(Request $request){
+        $data = $request->validate([
+            'nama_depan' => 'required',
+            'nama_belakang' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $newSiswa = Siswas::create($data);
+
+        return redirect(route('admin.akun'));
+    }
+
+    
 
 
 

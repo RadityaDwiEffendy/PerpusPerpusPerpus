@@ -236,7 +236,7 @@ table {
 
 
 table tr th {
-    width: 200px;
+    width: 150px;
     height: 40px;
 
     border-bottom: 1px solid black;
@@ -260,7 +260,7 @@ tbody tr td {
 }
 
 input{
-    width: 150px;
+    width: 120px;
     height: 30px;
     background-color: #A91D3A;
     color: white;
@@ -272,4 +272,47 @@ input:hover{
     background-color: #C73659;
     transition: .5s
 
+}
+
+
+
+.bta{
+    width: 120px;
+    height: 30px;
+    background-color: #006AFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.bta a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.bbb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cret button{
+    background-color: #006AFA;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    top: 20%;
+    left: 8%;
+}
+
+.cret:hover button{
+    background-color: #4391ff;
+    cursor: pointer;
 }

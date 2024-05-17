@@ -259,6 +259,7 @@ button a{
 
 .bukunya:hover .judull{
     color: white;
+    display: block;
 }
 
 .bukunya:hover .desc {
@@ -294,6 +295,7 @@ button a{
 
 
 .judull{
+    display: none;
     margin-top: 20px;
     font-size: 17px;
     color: black;

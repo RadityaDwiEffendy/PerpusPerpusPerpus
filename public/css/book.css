@@ -104,49 +104,6 @@
 
 }
 
-.bukunya{
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 243px;
-    height: 243px;
-    background-color: aqua;
-    position: relative;
-}
-/*  */
-
-
-
-.bukunya:hover {
-    background-color: #006AFA;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.bukunya:hover .judull{
-    color: white;
-    display: block;
-}
-
-.bukunya:hover .desc {
-    display: block;
-}
-
-.bukunya:hover img {
-    display: none;
-}
-
-.desc {
-    display: none; 
-}
-
-.desc p {
-    margin: 0;
-    padding: 10px;
-    color: white;
-}
-
-
-
 .isi-buku:hover{
     background-color: #006AFA;
     color: white;
@@ -266,7 +223,7 @@ button a{
 
 .isibuk{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-color: #F0F0F0  ;
     display: flex;
     justify-content: center;
@@ -275,10 +232,11 @@ button a{
 
 .lebihisi{
     width: 85%;
-    height: 100vh;
+    height: 90vh;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+  
 }
 
 .bukunya{
@@ -286,8 +244,44 @@ button a{
     margin-left: 20px;
     width: 243px;
     height: 243px;
-    background-color: blue;
+    background-color: aqua;
+    position: relative;
 }
+/*  */
+
+
+
+.bukunya:hover {
+    background-color: #006AFA;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bukunya:hover .judull{
+    color: white;
+    display: block;
+}
+
+.bukunya:hover .desc {
+    display: block;
+}
+
+.bukunya:hover img {
+    display: none;
+}
+
+.desc {
+    display: none; 
+}
+
+.desc p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+
+/*  */
 
 .bukunya img{
     width: 243px;
@@ -303,7 +297,7 @@ button a{
 .judull{
     margin-top: 20px;
     font-size: 17px;
-    color: white;
+    color: black;
     position: absolute;
     margin-left: 20px;
     font-weight: bold;
@@ -316,4 +310,21 @@ button a{
     position: absolute;
     width: 200px;
     color: white;
+}
+
+.bukunya input{
+    border-radius: 10px;
+    margin-top: 200px;
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    margin-left: 70px;
+}
+
+.bukunya input:hover{
+    cursor: pointer;
+    background-color: rgb(154, 4, 4);
 }

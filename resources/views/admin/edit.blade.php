@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Book</title>
-    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
 </head>
-<body>
 
+<body>
     <div class="container">
         <div class="profile">
             <div class="prof-anda">
-                <p>Buat Buku </p>
+                <p>Edit </p>
             </div>
 
 
             <div class="foro">
-                <form action="{{ route('admin.store') }}" method="POST">
+                <form method="POST" action="{{ route('admin.update', ['siswa'=>$siswa->id]) }}">
                     @csrf
+                    @method('PUT')
+    
                     <div class="namadpn">
-                        <label for="">Judul : </label>
+                        <label for="">ID : </label>
                         <div class="id">
-                            <input type="text" id="judul" name="judul"><br>
+                            <input type="text" name="id" value="{{ $siswa->id }}">
                         </div>
                     </div>
     
                     <div class="namadpn">
-                        <label for="">URL Gambar : </label>
+                        <label for="">Nama : </label>
                         <div class="namadepan">
-                            <input type="text" id="gambar_url" name="gambar_url"><br>
+                            <input type="text" name="nama_depan" value="{{ $siswa->nama_depan }}">
                         </div>
                     </div>
                     <div class="namadpn">
-                        <label for="">Deskripsi : </label>
+                        <label for="">Password : </label>
                         <div class="pasport">
-                            <textarea id="deskripsi" name="deskripsi"></textarea><br>
+                            <input type="text" name="password" value="{{ $siswa->password }}">
                         </div>
                     </div>
 
                     <div class="logout">
 
 
-                        <button type="submit">Submit</button>
+                        <input type="submit" value="Update">
         
         
                     </div>
@@ -54,6 +58,7 @@
         </div>
     </div>
 
-    
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
+
 </html>

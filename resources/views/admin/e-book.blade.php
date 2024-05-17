@@ -15,20 +15,20 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a href="{{ route('admin.home') }}">Buku</a>
+
             <a style="color: rgb(226, 226, 226)" href="{{ route('admin.e-book') }}">E-Book</a>
             <a href="{{ route('admin.akun') }}">Akun</a>
-            <a href="">Bantuan</a>
+            <a href="">Sedang Diminta</a>
         </div>
 
-        <button class="profile">
+        <button onclick="adminprof()" class="profile">
             <div class="gambar">
                 
             </div>
 
 
             <ul>
-                <li>Admin</li>
+                <p>Admin</p>
             </ul>
         </button>
 
@@ -47,10 +47,11 @@
         <div class="isibuk">
             <div class="lebihisi">
                 @foreach ($books as $book)
-                <div class="bukunya">
+                <div onclick="editBuku('{{ $book->id }}')" class="bukunya">
                     <img src="{{ $book->image_url }}" alt="">
                     <div class="judull">
                         <h2>{{ $book->judul }}</h2>
+                        {{-- <a href="">{{ $book->judul }}</a> --}}
                     </div>
 
                     <div class="desc">
@@ -58,7 +59,7 @@
                     </div>
 
 
-                    <form method="POST" action="{{ route('admin.destroy', ['siswa' => $book->id]) }}">
+                    <form method="POST" action="{{ route('admin.hapus', ['siswa' => $book->id]) }}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete">
@@ -69,6 +70,8 @@
         </div>
     </div>
 
+
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>

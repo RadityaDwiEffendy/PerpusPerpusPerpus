@@ -16,6 +16,13 @@ class BookController extends Controller
     }
 
 
+    public function ShowBuku($id)
+    {
+        $book = Book::findOrFail($id);
+        return view('admin.showBuku', compact('book'));
+    }
+
+
     public function home()
     {
         $books = Book::all();       
@@ -25,12 +32,22 @@ class BookController extends Controller
         return view('layout.home', compact('books', 'nama_lengkap'));
     }
 
+    public function adminprof(){
+        return view('admin.admin_profile');
+    }
+
+
+    public function admin()
+    {
+        $books = Book::all();
+        return view('admin.e-book', ['books' => $books]);
+    }
     
 
 
 
     
-    public function delete ($id){
+    public function hapus ($id){
         $books = Book::findOrFail($id);
         $books->delete();
         return redirect(route('admin.e-book'))->with("Success", "Siswa berhasil dihapus");

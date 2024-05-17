@@ -12,8 +12,7 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a href="">Buku</a>
-            <a style="color: rgb(180, 180, 180)"  href="">E-Book</a>
+            <a style="color: rgb(180, 180, 180)"   href="">Buku</a>
             <a href="">Favorit</a>
             <a href="">Sedang Diminta</a>
             <a href="">Bantuan</a>
@@ -26,7 +25,7 @@
 
 
             <ul>
-                <li>{{ $nama_lengkap }}</li>
+                <p>{{ $nama_lengkap }}</p>
             </ul>
 
             

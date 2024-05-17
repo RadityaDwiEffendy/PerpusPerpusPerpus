@@ -1,4 +1,4 @@
-<!-- resources/views/profile/index.blade.php -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,6 @@
     <h1>Profile</h1>
     <p>Nama Depan: {{ $user->nama_depan }}</p>
     <p>Nama Belakang: {{ $user->nama_belakang }}</p>
-    <!-- Tambahkan informasi profil lainnya di sini -->
+    
 </body>
 </html>
