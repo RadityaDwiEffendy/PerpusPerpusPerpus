@@ -27,10 +27,15 @@ Route::get('/home', [SiswaController::class, 'home'])->name('layout.home');
 Route::post('/login', [SiswaController::class, 'authenticate'])->name('login');
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 Route::get('/books/create', [BookController::class, 'create'])->name('books.create');
-// Route::post('/books', [BookController::class, 'store'])->name('books.store');
+//
 Route::get('/home', 'HomeController@index')->middleware(CheckRole::class);
 Route::get('/siswa/admin', [SiswaController::class, 'admin'])->name('siswa.admin');
 Route::get('/layout/home', [BookController::class, 'home'])->name('layout.home');
+Route::get('/layout/favorit', [BookController::class, 'favorit'])->name('layout.favorit');
+Route::get('/api/books/{book}', [BookController::class, 'getBookData']);
+
+
+//admin
 Route::get('/layout/home/admin', [BookController::class, 'admin'])->name('admin.home');
 Route::get('/layout/home/akun', [SiswaController::class, 'akun'])->name('admin.akun');
 Route::delete('/layout/home/{siswa}/destroy', [SiswaController::class, 'destroy'])->name('admin.destroy');
@@ -47,3 +52,5 @@ Route::get('/layout/home/profile', [BookController::class, 'adminprof'])->name('
 Route::get('/layout/home/{Book}/buku', [BookController::class, 'ShowBuku'])->name('admin.ShowBuku');
 Route::get('/home/{Book}/buku', [BookController::class, 'buku'])->name('layout.buku');
 Route::get('/layout/home/{Book}/buku/pengaturan', [BookController::class, 'pengaturan'])->name('admin.pengaturan');
+
+

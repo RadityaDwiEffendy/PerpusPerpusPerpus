@@ -12,52 +12,51 @@
 
     <div class="navbar">
         <div class="nav-link">
-            <a style="color: rgb(180, 180, 180)"   href="">Buku</a>
-            <a href="">Favorit</a>
+            <a style="color: rgb(180, 180, 180)" href="">Buku</a>
+            <a href="{{ route('layout.favorit') }}">Favorit</a>
             <a href="">Sedang Diminta</a>
             <a href="">Bantuan</a>
         </div>
 
         <button onclick="profile()" class="profile">
             <div class="gambar">
-                
             </div>
-
-
             <ul>
                 <p>{{ $nama_lengkap }}</p>
             </ul>
-
-            
         </button>
-
-
-
     </div>
 
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <div class="isibuk">
+        <div class="lebihisi">
+            @foreach ($books as $book)
+                <div class="bookcont">
+                    <div onclick="Buku('{{ $book->id }}')" class="bukunya">
+                        <img src="{{ $book->image_url }}" alt="">
+                        <div class="judull">
+                            <h2>{{ $book->judul }}</h2>
+                        </div>
+                        <div class="desc">
+                            <p>{{ $book->deskripsi }}</p>
+                        </div>
 
-        
-        <div class="isibuk">
-            <div class="lebihisi">
-                @foreach ($books as $book)
-                <div onclick="Buku('{{ $book->id }}')" class="bukunya">
-                    <img src="{{ $book->image_url }}" alt="">
-                    <div class="judull">
-                        <h2>{{ $book->judul }}</h2>
+
                     </div>
-
-                    <div class="desc">
-                        <p>{{ $book->deskripsi }}</p>
+                    <div class="fav">
+                        <input onchange="toggleDataVisibility('{{ $book->id }}')"
+                            id="ShowDataCheckBox_{{ $book->id }}" type="checkbox" value="{{ $book->id }}">
+                        <label for="ShowDataCheckBox_{{ $book->id }}"></label>
                     </div>
                 </div>
-                @endforeach
-            </div>
-        </div>
+            @endforeach
 
-        <script src="{{ asset('js/script.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </div>
+    </div>
+
+    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

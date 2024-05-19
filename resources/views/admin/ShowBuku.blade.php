@@ -57,6 +57,7 @@
                     <button onclick="setting('{{ $book->url }}')">
                         <p>Download</p>
                     </button>
+
                 </div>
             </div>
         </div>

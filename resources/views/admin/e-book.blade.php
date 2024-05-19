@@ -60,8 +60,6 @@
 
                    
 
-                    
-
 
                     <form method="POST" action="{{ route('admin.hapus', ['siswa' => $book->id]) }}">
                         @csrf

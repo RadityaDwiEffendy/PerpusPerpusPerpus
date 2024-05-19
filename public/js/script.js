@@ -60,9 +60,67 @@ function adminprof(){
     
 }
 
-function akun(){
-    {{ route('admin.akun') }}
+function toggleDataVisibility(bookId) {
+    var checkbox = document.getElementById('ShowDataCheckBox_' + bookId);
+    var dataContainer = document.getElementById('dataContainer_' + bookId);
+
+    localStorage.setItem('DataVisibility_' + bookId, checkbox.checked);
+
+    if (checkbox.checked) {
+        fetchDataAndDisplay(bookId); 
+    } else {
+        dataContainer.style.display = 'none'; 
+    }
 }
+
+window.onload = function() {
+    var checkboxes = document.querySelectorAll('[id^="ShowDataCheckBox_"]');
+    checkboxes.forEach(function(checkbox) {
+        var bookId = checkbox.value;
+        var DataVisibility = localStorage.getItem('DataVisibility_' + bookId);
+
+        if (DataVisibility === 'true') {
+            checkbox.checked = true;
+            fetchDataAndDisplay(bookId);
+        } else {
+            checkbox.checked = false;
+            var dataContainer = document.getElementById('dataContainer_' + bookId);
+            if (dataContainer) {
+                dataContainer.style.display = 'none';
+            }
+        }
+    });
+}
+
+
+
+function fetchDataAndDisplay(bookId) {
+    fetch('/api/books/' + bookId)
+        .then(response => response.json())
+        .then(book => {
+            var dataContainer = document.getElementById('dataContainer');
+            dataContainer.innerHTML = '';
+
+            var html = `
+        <div onclick="Buku('${book.id}')" class="bukunya">
+            <img src="${book.image_url}" alt="">
+            <div class="judull">
+                <h2>${book.judul}</h2>
+            </div>
+            <div class="desc">
+                <p>${book.deskripsi}</p>
+            </div>
+        </div>`;
+            dataContainer.innerHTML += html;
+
+        })
+        .catch(error => {
+            console.error('error', error);
+        });
+}
+
+
+
 
 function editBuku(bookID) {
     window.location.href = `/layout/home/${bookID}/buku`;
@@ -73,6 +131,10 @@ function Buku(bookID) {
 
 function editawal(){
     window.location.href = ''
+}
+
+function editB(){
+    window.location.href = 'buku/pengaturan'
 }
 
 
