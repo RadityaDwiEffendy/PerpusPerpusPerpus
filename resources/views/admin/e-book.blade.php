@@ -51,12 +51,16 @@
                     <img src="{{ $book->image_url }}" alt="">
                     <div class="judull">
                         <h2>{{ $book->judul }}</h2>
-                        {{-- <a href="">{{ $book->judul }}</a> --}}
+                        
                     </div>
 
                     <div class="desc">
                         <p>{{ $book->deskripsi }}</p>
                     </div>
+
+                   
+
+                    
 
 
                     <form method="POST" action="{{ route('admin.hapus', ['siswa' => $book->id]) }}">
@@ -64,7 +68,9 @@
                         @method('DELETE')
                         <input type="submit" value="Delete">
                     </form>
+
                 </div>
+                
                 @endforeach
             </div>
         </div>
@@ -72,6 +78,7 @@
 
 
     <script src="{{ asset('js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

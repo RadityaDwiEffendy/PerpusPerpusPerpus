@@ -45,4 +45,5 @@ Route::post('/layout/home/buatakun', [SiswaController::class, 'buat'])->name('ad
 Route::get('/layout/home/buku', [SiswaController::class, 'buku'])->name('admin.book');
 Route::get('/layout/home/profile', [BookController::class, 'adminprof'])->name('admin.admin_profile');
 Route::get('/layout/home/{Book}/buku', [BookController::class, 'ShowBuku'])->name('admin.ShowBuku');
-
+Route::get('/home/{Book}/buku', [BookController::class, 'buku'])->name('layout.buku');
+Route::get('/layout/home/{Book}/buku/pengaturan', [BookController::class, 'pengaturan'])->name('admin.pengaturan');

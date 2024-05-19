@@ -15,6 +15,7 @@ class Siswas extends Authenticatable
         'nama_belakang',
         'username',
         'password',
+        'role_id',
     ];
 
     protected $attributes = [

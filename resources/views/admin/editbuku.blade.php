@@ -18,37 +18,37 @@
 
 
             <div class="foro">
-                <form method="POST" action="{{ route('admin.update', ['siswa'=>$siswa->id]) }}">
+                <form method="POST" action="{{ route('admin.perbaruiBuku', ['book'=>$book->id]) }}">
                     @csrf
                     @method('PUT')
     
                     <div class="namadpn">
-                        <label for="">ID : </label>
+                        <label for="">Author : </label>
                         <div class="id">
-                            <input type="text" name="id" value="{{ $siswa->id }}">
+                            <input type="text" name="id" value="{{ $book->author }}">
                         </div>
                     </div>
     
                     <div class="namadpn">
-                        <label for="">Nama : </label>
+                        <label for="">Judul : </label>
                         <div class="namadepan">
-                            <input type="text" name="nama_depan" value="{{ $siswa->nama_depan }}">
+                            <input type="text" name="nama_depan" value="{{ $book->Judul }}">
                         </div>
                     </div>
                     <div class="namadpn">
-                        <label for="">Password : </label>
+                        <label for="">Url gambar : </label>
                         <div class="pasport">
-                            <input type="text" name="password" value="{{ $siswa->password }}">
+                            <input type="text" name="password" value="{{ $book->gambar_url }}">
+                        </div>
+                    </div>
+                    <div class="namadpn">
+                        <label for="">Deskripsi : </label>
+                        <div class="pasport">
+                            <input type="text" name="password" value="{{ $book->deskripsi }}">
                         </div>
                     </div>
 
-                    <div class="logout">
-
-
-                        <input type="submit" value="Update">
-        
-        
-                    </div>
+                    
     
     
                 </form>

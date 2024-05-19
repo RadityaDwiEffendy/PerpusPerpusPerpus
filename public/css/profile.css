@@ -103,3 +103,11 @@ button:nth-child(2) {
 button:nth-child(2):hover {
     background-color: rgb(77, 163, 255);
 }
+
+
+.form{
+    background-color: aliceblue;
+    border-top: 1px solid rgb(124, 124, 124);
+    border-bottom: 1px solid rgb(124, 124, 124);
+    
+}

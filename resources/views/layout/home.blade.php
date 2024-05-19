@@ -42,7 +42,7 @@
         <div class="isibuk">
             <div class="lebihisi">
                 @foreach ($books as $book)
-                <div class="bukunya">
+                <div onclick="Buku('{{ $book->id }}')" class="bukunya">
                     <img src="{{ $book->image_url }}" alt="">
                     <div class="judull">
                         <h2>{{ $book->judul }}</h2>
@@ -57,7 +57,7 @@
         </div>
 
         <script src="{{ asset('js/script.js') }}"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

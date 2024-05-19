@@ -26,6 +26,10 @@
                     <p>username : </p>
                     <h4>{{ session('username') }}</h4>
                 </div>
+                <div class="nama">
+                    <p>password : </p>
+                    <h4>{{ session('password') }}</h4>
+                </div>
 
             </div>
 
@@ -40,5 +44,6 @@
     </div>
 
     <script src="{{ asset('js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

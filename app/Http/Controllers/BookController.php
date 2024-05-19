@@ -15,11 +15,43 @@ class BookController extends Controller
         return view('admin.e-book', compact('books')); 
     }
 
+    public function editbuku(Book $book)
+{
+    return view('admin.editbuku', compact('book'));
+}
+
+
+    public function perbaruiBuku(Request $request, Book $book){
+        $data = $request->validate([
+            'author'=>'required',
+            'judul'=> 'required',
+            'gambar_url' => 'required|url',
+            'deskripsi' => 'required',
+        ]);
+
+        $book->update($data);
+        
+        return redirect(route('admin.akun'));
+    }
+
+    public function pengaturan(Book $book){
+        return view('admin.pengaturan', compact('book'));
+    }
+
 
     public function ShowBuku($id)
     {
         $book = Book::findOrFail($id);
         return view('admin.showBuku', compact('book'));
+    }
+
+    public function buku($id)
+    {
+        $book = Book::findOrFail($id);
+        $nama_depan = session('nama_depan');
+        $nama_belakang = session('nama_belakang');
+        $nama_lengkap = $nama_depan . ' ' . $nama_belakang;
+        return view('layout.buku', compact('book','nama_lengkap'));
     }
 
 
@@ -31,6 +63,7 @@ class BookController extends Controller
         $nama_lengkap = $nama_depan . ' ' . $nama_belakang;
         return view('layout.home', compact('books', 'nama_lengkap'));
     }
+
 
     public function adminprof(){
         return view('admin.admin_profile');
@@ -75,15 +108,20 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'author' => 'required',
             'judul' => 'required',
             'gambar_url' => 'required|url',
             'deskripsi' => 'required',
+            'url'=> 'required'
         ]);
         
         Book::create([
+            'author' => $request->author,
             'judul' => $request->judul,
             'image_url' => $request->gambar_url,
             'deskripsi' => $request->deskripsi,
+            'isibuku' => $request->isibuku,
+            'url' => $request->url
         ]);
         
 

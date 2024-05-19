@@ -10,23 +10,24 @@
 <body>
     <div class="navbar">
         <div class="nav-link">
-            <a href="{{ route('admin.e-book') }}">E-Book</a>
-            <a style="color: rgb(226, 226, 226)" href="{{ route('admin.akun') }}">Akun</a>
+            <a style="color: rgb(180, 180, 180)"   href="">Buku</a>
+            <a href="">Favorit</a>
             <a href="">Sedang Diminta</a>
+            <a href="">Bantuan</a>
         </div>
 
-        <button onclick="adminprof()" class="profile">
+        <button onclick="profile()" class="profile">
             <div class="gambar">
-
+                
             </div>
 
 
             <ul>
-                <p>Admin</p>
+                <p>{{ $nama_lengkap }}</p>
             </ul>
+
+            
         </button>
-
-
 
 
 
@@ -39,6 +40,7 @@
 
                 <img src="{{ $book->image_url }}" alt="">
 
+                
                 <div class="isin">
                     <div class="author">
                         <h4>Author : </h4>
@@ -51,16 +53,29 @@
                     </div>
                 </div>
 
+
+
             </div>
+
             <div class="buat">
                 <div class="btnn">
                     <button onclick="setting('{{ $book->url }}')">
-                        <p>Download</p>
+                        <p>Baca</p>
+                    </button>
+                    <button>
+                        <p>Pinjam</p>
                     </button>
                 </div>
             </div>
+
+           
+
+
+
         </div>
     </div>
+
+    
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

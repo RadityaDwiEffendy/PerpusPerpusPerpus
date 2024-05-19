@@ -19,6 +19,12 @@
                 <form action="{{ route('admin.store') }}" method="POST">
                     @csrf
                     <div class="namadpn">
+                        <label for="">Author : </label>
+                        <div class="id">
+                            <input type="text"  name="author"><br>
+                        </div>
+                    </div>
+                    <div class="namadpn">
                         <label for="">Judul : </label>
                         <div class="id">
                             <input type="text" id="judul" name="judul"><br>
@@ -37,6 +43,13 @@
                             <textarea id="deskripsi" name="deskripsi"></textarea><br>
                         </div>
                     </div>
+                    <div class="namadpn1">
+                        <label for="">URL Download : </label>
+                        <div class="namadepan1">
+                            <input type="text" id="url" name="url"><br>
+                        </div>
+                    </div>
+                    
 
                     <div class="logout">
 

@@ -5,7 +5,7 @@
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: 140vh;
     background-color: rgb(238, 238, 238);
     display: flex;
     align-items: center;
@@ -14,10 +14,11 @@
 
 .profile{
     width: 50%;
-    height: 80vh;
+    height: 120vh;
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    border-radius: 20px;
 }
 
 .prof-anda{
@@ -106,7 +107,25 @@ button:hover{
 }
 
 .namadpn input{
-    width: 280px;
+    width: 350px;
+    height:35px;
+    padding-left: 10px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+/*  */
+.namadpn1{
+    margin-top: 70px;
+    width: 100%;
+    height: 50px;
+    margin-left: 40px;
+    
+}
+
+.namadpn1 input{
+    width: 350px;
     height:35px;
     padding-left: 10px;
     border: none;
@@ -116,7 +135,8 @@ button:hover{
 
 
 .namadpn textarea{
-    width: 280px;
+    padding-top: 10px;
+    width: 350px;
     height:85px;
     padding-left: 10px;
     border: none;
