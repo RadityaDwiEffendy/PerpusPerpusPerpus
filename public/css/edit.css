@@ -18,6 +18,7 @@
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    border-radius: 20px;
 }
 
 .prof-anda{
@@ -26,6 +27,7 @@
     background-color: rgb(37, 124, 255);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    
     display: flex;
     align-items: center;
 }

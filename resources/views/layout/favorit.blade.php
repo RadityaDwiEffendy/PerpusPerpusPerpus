@@ -31,7 +31,11 @@
 
     <div class="isibuk">
         <div class="lebihisi">
-            <div id="dataContainer"> </div>
+            <div id="dataContainer">
+                @foreach ($books as $book)
+                    <div id="dataContainer_{{ $book->id }}" style="display: none;"></div>
+                @endforeach
+            </div>
         </div>
     </div>
 

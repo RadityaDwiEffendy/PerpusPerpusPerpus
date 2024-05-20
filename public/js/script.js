@@ -56,13 +56,13 @@ function adminprof(){
             }
         }
     });
-    
+     
     
 }
 
 function toggleDataVisibility(bookId) {
     var checkbox = document.getElementById('ShowDataCheckBox_' + bookId);
-    var dataContainer = document.getElementById('dataContainer_' + bookId);
+    var dataContainer = document.getElementById('dataContainer');
 
     localStorage.setItem('DataVisibility_' + bookId, checkbox.checked);
 
