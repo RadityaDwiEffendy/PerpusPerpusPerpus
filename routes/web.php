@@ -8,6 +8,8 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\UserMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PeminjamanController;
 use App\Http\Middleware\CheckRole;
 use App\Models\Siswas;
 
@@ -33,6 +35,18 @@ Route::get('/siswa/admin', [SiswaController::class, 'admin'])->name('siswa.admin
 Route::get('/layout/home', [BookController::class, 'home'])->name('layout.home');
 Route::get('/layout/favorit', [BookController::class, 'favorit'])->name('layout.favorit');
 Route::get('/api/books/{book}', [BookController::class, 'getBookData']);
+Route::get('/layout/home/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/home/{Book}/buku', [BookController::class, 'buku'])->name('layout.buku');
+Route::get('/home/{Book}/buku/peminjaman', [BookController::class, 'peminjaman'])->name('layout.peminjaman');
+Route::get('/home/{Book}/buku/BacaBuku', [BookController::class, 'BacaBuku'])->name('layout.BacaBuku');
+
+
+Route::get('/home/{Book}/buku/createPinjam', [PeminjamanController::class, 'create'])->name('layout.createPinjam');
+Route::get('/home/{Book}/buku/edit{book_id}', [PeminjamanController::class, 'create'])->name('layout.createPinjam');
+Route::post('/home/{Book}/buku/edit{book_id}', [PeminjamanController::class, 'store']);
+ 
+
+Route::get('/home/{Book}/buku/edit{id}', [PeminjamanController::class, 'creates']);
 
 
 //admin
@@ -50,7 +64,6 @@ Route::post('/layout/home/buatakun', [SiswaController::class, 'buat'])->name('ad
 Route::get('/layout/home/buku', [SiswaController::class, 'buku'])->name('admin.book');
 Route::get('/layout/home/profile', [BookController::class, 'adminprof'])->name('admin.admin_profile');
 Route::get('/layout/home/{Book}/buku', [BookController::class, 'ShowBuku'])->name('admin.ShowBuku');
-Route::get('/home/{Book}/buku', [BookController::class, 'buku'])->name('layout.buku');
 Route::get('/layout/home/{Book}/buku/pengaturan', [BookController::class, 'pengaturan'])->name('admin.pengaturan');
 
 

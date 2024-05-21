@@ -62,14 +62,14 @@ function adminprof(){
 
 function toggleDataVisibility(bookId) {
     var checkbox = document.getElementById('ShowDataCheckBox_' + bookId);
-    var dataContainer = document.getElementById('dataContainer');
+    var dataContainer = document.getElementById('dataContainer_' + bookId);
 
     localStorage.setItem('DataVisibility_' + bookId, checkbox.checked);
 
     if (checkbox.checked) {
-        fetchDataAndDisplay(bookId); 
+        fetchDataAndDisplay(bookId);
     } else {
-        dataContainer.style.display = 'none'; 
+        dataContainer.style.display = 'none';
     }
 }
 
@@ -84,41 +84,43 @@ window.onload = function() {
             fetchDataAndDisplay(bookId);
         } else {
             checkbox.checked = false;
-            var dataContainer = document.getElementById('dataContainer_' + bookId);
-            if (dataContainer) {
-                dataContainer.style.display = 'none';
-            }
         }
     });
 }
-
-
 
 function fetchDataAndDisplay(bookId) {
     fetch('/api/books/' + bookId)
         .then(response => response.json())
         .then(book => {
-            var dataContainer = document.getElementById('dataContainer');
+            var dataContainer = document.getElementById('dataContainer_' + bookId);
             dataContainer.innerHTML = '';
 
             var html = `
-        <div onclick="Buku('${book.id}')" class="bukunya">
-            <img src="${book.image_url}" alt="">
-            <div class="judull">
-                <h2>${book.judul}</h2>
-            </div>
-            <div class="desc">
-                <p>${book.deskripsi}</p>
-            </div>
-        </div>`;
+                <div onclick="Buku('${book.id}')" class="bukunya">
+                    <img src="${book.image_url}" alt="">
+                    <div class="judull">
+                        <h2>${book.judul}</h2>
+                    </div>
+                    <div class="desc">
+                        <p>${book.deskripsi}</p>
+                    </div>
+                </div>`;
             dataContainer.innerHTML += html;
 
+            dataContainer.style.display = 'block';
         })
         .catch(error => {
-            console.error('error', error);
+            console.error('Error:', error);
         });
 }
 
+function createPinjam(){
+    window.location.href = '/home/3$/buku/createPinjam'
+}
+
+function baca(){
+    window.location.href = `/home/${Book}/buku/BacaBuku`
+}
 
 
 

@@ -24,6 +24,19 @@ class BookController extends Controller
     public function getBookData(Book $book) {
         return response()->json($book);
     }
+
+
+    public function peminjaman(){
+        return view('layout.peminjaman');
+    }
+
+    public function BacaBuku($id){
+        $book = Book::findOrFail($id);
+        $nama_depan = session('nama_depan');
+        $nama_belakang = session('nama_belakang');
+        $nama_lengkap = $nama_depan . ' ' . $nama_belakang;
+        return view('layout.BacaBuku', compact('book', 'nama_lengkap'));
+    }
     
 
 

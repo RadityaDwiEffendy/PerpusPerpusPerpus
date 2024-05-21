@@ -60,9 +60,12 @@
             <div class="buat">
                 <div class="btnn">
                     <button onclick="setting('{{ $book->url }}')">
+                        <p>Download</p>
+                    </button>
+                    <button onclick="baca()">
                         <p>Baca</p>
                     </button>
-                    <button>
+                    <button onclick="createPinjam()">
                         <p>Pinjam</p>
                     </button>
                 </div>

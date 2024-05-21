@@ -55,7 +55,10 @@
             <div class="buat">
                 <div class="btnn">
                     <button onclick="setting('{{ $book->url }}')">
-                        <p>Download</p>
+                        <p>Baca</p>
+                    </button>
+                    <button onclick="setting('{{ $book->url }}')">
+                        <p>Edit</p>
                     </button>
 
                 </div>

@@ -74,6 +74,7 @@
     background-color: white;
     overflow-y: scroll;
     display: flex;
+
 }
 
 .buku-buku{
@@ -223,7 +224,7 @@ button a{
 
 .isibuk{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     background-color: #F0F0F0  ;
     display: flex;
     justify-content: center;
@@ -232,7 +233,7 @@ button a{
 
 .lebihisi{
     width: 85%;
-    height: 80vh;
+    height: 90vh;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -244,7 +245,7 @@ button a{
     margin-left: 20px;
     width: 243px;
     height: 243px;
-    background-color: rgb(10, 23, 111);
+    background-color: aqua;
     position: relative;
 }
 /*  */
@@ -327,4 +328,54 @@ button a{
 .bukunya input:hover{
     cursor: pointer;
     background-color: rgb(154, 4, 4);
+}
+
+
+.dashboard{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.kotak{
+    width: 240px;
+    height: 80px;
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+}
+
+.ttl{
+
+}
+
+.isii{
+    margin-left: 30px;
+}
+
+.dlmm{
+    width: 95%;
+    height: 150px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.kotak p{
+    font-size: 10px;
+    font-weight: bolder;
+    color: rgb(54, 28, 224);
+}
+
+.ttl h1{
+    font-weight: bold;
+    font-size: 15px;
 }

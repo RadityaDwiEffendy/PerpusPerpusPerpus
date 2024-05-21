@@ -175,6 +175,14 @@
     color: white;
     border: 1px solid black;
 }
+.btnn button:nth-child(3){
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #215D99;
+    color: white;
+    border: 1px solid black;
+}
 
 .btnn button:hover:first-child{
     cursor: pointer;
@@ -184,5 +192,11 @@
 .btnn button:hover:nth-child(2){
     cursor: pointer;
     background-color: rgb(1, 176, 1);
-    background-color: rgb(1, 176, 1);
+    border: 1px solid rgb(1, 176, 1);
+}
+.btnn button:hover:nth-child(3){
+    cursor: pointer;
+    background-color: #4594e3;
+    border: 1px solid #4594e3;
+
 }
