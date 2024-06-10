@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #215D99;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.nav-link {
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #215D99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.nav-link {
+    height: 60px;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+
+.judulss{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+
+    margin-left: 50px;
+}
+
+
+.gambar {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+
+
+  .profile {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.isibuk{
+    width: 100%;
+    height: auto;
+    background-color: #F0F0F0  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.kosong{
+    height: 50px;
+    background-color: aqua;
+}
+
+.lebihisi{
+    width: 85%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+
+}
+
+.ingpo{
+    background-color: #F0F0F0;
+    width: 90%;
+    height: 180px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ingpo img{
+    width: 140px;
+    height: 140px;
+    margin-left: 15px;
+    background-color: gray;
+    object-fit: cover;
+    display: block;
+
+}
+
+.author{
+    display: flex;
+}
+
+.isin{
+    height: 100px;
+    margin-left: 20px;
+}
+
+.desk{
+    margin-top: 20px;
+    display: flex;
+}
+
+.desk h4{
+    width: 100px;
+}
+
+.author h4{
+    width: 80px;
+}
+
+.bca button{
+    width: 120px;
+    height: 35px;
+}
+
+
+.buat{
+    margin-bottom: 290px;
+    width: 90%;
+    height: 50px;
+    background-color: #F0F0F0;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.buat a{
+    width: 140px;
+    height: 30px;
+    background-color: #215D99;
+}
+
+
+.btnn{
+    margin-left: 50px;
+}
+
+
+
+.conta{
+
+    width: 100%;
+
+}
+
+
+
+
+.bcaa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is{
+
+    margin-top: 20px;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+.contar{
+    width: 80%;
+    margin-left: 100px;
+
+}
+

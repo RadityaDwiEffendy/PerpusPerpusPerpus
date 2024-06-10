@@ -21,7 +21,17 @@
     margin: 0;
 }
 
+.rat{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 30px;
+    display: flex;
 
+}
+
+.rat p:nth-child(2){
+    margin-left: 10px;
+}
 
 .navbar {
     width: 100%;
@@ -113,6 +123,7 @@
     display: flex;
 }
 
+
 .isin{
     height: 100px;
     margin-left: 20px;
@@ -147,6 +158,28 @@
     align-items: center;
 }
 
+.rating{
+    margin-left: 20px;
+}
+
+
+
+
+#ratingForm{
+    position: absolute;
+
+    margin-bottom: 350px;
+    width: 76.5%;
+    height: 150px;
+    background-color: #F0F0F0;
+    border-top: 1px solid black;
+    display: flex;
+    top: 310px;
+    align-items: center;
+}
+
+
+
 .buat a{
     width: 140px;
     height: 30px;
@@ -158,6 +191,47 @@
     margin-left: 50px;
 }
 
+.stars{
+    display: flex;
+    justify-content: center;
+    
+    padding: 20px 0;
+}
+
+
+
+.stars input{
+
+    display: none;
+}
+
+.stars label{
+    display: inline-block;
+    font-size: 2em;
+    color: #ddd;
+}
+
+.stars input:checked ~ label {
+    color: #f5b301;
+}
+
+.stars input:hover ~ label{
+    color: #ffcf00;
+}
+
+.rating button{
+    width: 120px;
+    height: 25px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4594e3;
+    color: white;
+}
+
+.rating button:hover{
+    cursor: pointer;
+}
 
 .btnn button{
     width: 130px;

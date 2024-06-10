@@ -31,31 +31,7 @@ function BuatAKun(){
 
 function adminprof(){
 
-    Swal.fire({
-        title: "Masukkan password Admin",
-        input: "password",
-        inputAttributes: {
-            autocapitalize: "off"
-        },
-        showCancelButton: true,
-        confirmButtonText: "Konfirmasi",
-        showLoaderOnConfirm: true,
-        preConfirm: async (password) => {
-            if (password === "admin") {
-                window.location.href = 'profile';
-            } else {
-                Swal.fire({
-                    icon: "error",
-                    title: "Kata sandi salah!",
-                    text: "Anda bukan seorang admin.",
-                    showConfirmButton: false,
-                    timer: 2000
-                }).then(() => {
-                    window.location.href = '/';
-                });
-            }
-        }
-    });
+    window.location.href = 'profile';
      
     
 }
@@ -72,6 +48,8 @@ function toggleDataVisibility(bookId) {
         dataContainer.style.display = 'none';
     }
 }
+
+
 
 window.onload = function() {
     var checkboxes = document.querySelectorAll('[id^="ShowDataCheckBox_"]');
@@ -114,12 +92,75 @@ function fetchDataAndDisplay(bookId) {
         });
 }
 
-function createPinjam(){
-    window.location.href = '/home/3$/buku/createPinjam'
+
+function submitRating(bookId){
+    const form = document.getElementById('ratingForm')
+    const getform = new FormData(form)
+    const rating = getform.get('rating')
+
+
+
+    if(!rating){
+        Swal.fire('Error', 'pilih ratting', 'error')
+        return
+    }
+
+
+    fetch(`/rating/${bookId}` ,{
+        method: 'POST',
+        headers : {
+            'Content-Type' : 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name= "csrf-token"]').getAttribute('content')
+        },
+        body: JSON.stringify({rating:rating})
+        
+    })
+
+    .then(response => {
+        if(!response.ok){
+            throw new Error('Network response was not ok')
+        }
+        return response.json()
+    })
+
+    .then(data => {
+        if(data.success){
+            window.location.href = '/layout/peminjam'
+        }else{
+            Swal.fire('error', 'rating error coba lagi nanti', 'error')
+        }
+
+    })
+
+    .catch(error => {
+        Swal.fire('error', 'an error occurred', 'error')
+    })
+
 }
 
-function baca(){
-    window.location.href = `/home/${Book}/buku/BacaBuku`
+
+
+function editPetugas(bookID){
+    window.location.href = `/layout/home/petugas/${bookID}/edit`
+}
+
+function createPinjam(bookId){
+    window.location.href =`/home/${bookId}/buku/createPinjam`
+}
+
+function baca(button){
+    const bookId = button.getAttribute('data-book-id')
+    window.location.href = `/home/${bookId}/buku/BacaBuku`
+}
+
+
+function bacas(){
+    window.location.href = `/layout/home/${Book}/buku/editBaca`
+}
+
+function EditBukuPengaturan(button){
+    const bookId = button.getAttribute('data-book-id')
+    window.location.href = `/layout/home/${bookId}/buku/editBaca`;
 }
 
 

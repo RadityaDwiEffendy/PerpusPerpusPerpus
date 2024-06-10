@@ -226,38 +226,7 @@
     display: flex;
 }
 
-table {
-    border: 1px solid black;
-    background-color: black;
 
-
-}
-
-
-
-table tr th {
-    width: 150px;
-    height: 40px;
-
-    border-bottom: 1px solid black;
-    padding-top: 10px;
-    margin-top: -10px;
-    background-color: white
-}
-
-.siswa-body {
-    background-color: white;
-
-}
-
-tbody tr {
-    height: 40px;
-
-}
-
-tbody tr td {
-    text-align: center
-}
 
 input{
     width: 120px;
@@ -274,6 +243,43 @@ input:hover{
 
 }
 
+.content-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: .9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr{
+    background-color: #009897;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+
+.content-table tbody tr{
+    border-bottom:1px solid #dddddd ;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    color: #009897;
+    font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #009897;
+}
 
 
 .bta{
@@ -287,6 +293,23 @@ input:hover{
     border-radius: 10px;
 }
 
+.isibuk{
+    width: 100%;
+    height: 90vh;
+    background-color: #F0F0F0  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lebihisi{
+    width: 85%;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
 .bta a{
     color: white;
     text-decoration: none;

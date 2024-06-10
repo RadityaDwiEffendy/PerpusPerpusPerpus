@@ -6,42 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/e-book.css') }}">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
 
+    
     <div class="navbar">
         <div class="nav-link">
             <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-            <a style="color: rgb(226, 226, 226)" href="{{ route('admin.e-book') }}">E-Book</a>
-            <a href="{{ route('admin.akun') }}">Akun</a>
-            <a href="">Sedang Diminta</a>
+            <a href="{{ route('admin.e-book') }}">E-Book</a>
         </div>
-
+    
         <button onclick="adminprof()" class="profile">
             <div class="gambar">
-                
+    
             </div>
-
-
+    
+            
             <ul>
                 <p>Admin</p>
             </ul>
         </button>
-
-
-
+    
+    
+    
     </div>
-
 
     <div class="container">
         <div class="buat">
-            <button>
-                <a href="{{ route('books.create') }}">Buat buku</a>
-            </button>
+            <div class="dlm">
+                <button>
+                    <a href="{{ route('books.create') }}">Buat buku</a>
+                </button>
+            </div>
         </div>
 
         <div class="isibuk">

@@ -9,14 +9,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: url('/iamge/bg.png'); 
+    background-size: cover;
+    background-position: center;
 }
 
 .isi{
 
     width: 30%;
     height: 80vh;
-    border: 1px solid #DFDFDF;
+    border: 2px solid #412624;
+    background-image: url('/iamge/bgkyu.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
 }
 
 
@@ -42,6 +48,7 @@
 }
 .nama p{
     font-weight: bold;
+    color: white;
 }
 
 .pass{
@@ -56,15 +63,17 @@
 .nama input{
     width: 40%;
     height: 30px;
+    background-color: #baaa80;
     padding-left: 10px;
-    border: 2px solid #E5E5E5;
+    border: 2px solid #412624;
     border-radius: 10px;
 }
 .ussername input{
     width: 85%;
     height: 30px;
     padding-left: 10px;
-    border: 2px solid #E5E5E5;
+    background-color: #baaa80;
+    border: 2px solid #412624;
     border-radius: 10px;
 }
 
@@ -72,28 +81,36 @@
     width: 85%;
     height: 30px;
     padding-left: 10px;
-    border: 2px solid #E5E5E5;
+    background-color: #baaa80;
+    border: 2px solid #412624;
     border-radius: 10px;
 }
 
 .submit input{
-    background-color: #215D99;
+    background-color: #baaa80;
     margin-top: 20px;
     margin-left: 15px;
     width: 80%;
     height: 40px;
-    color: white;
+    color: #412624;
+    font-weight: bolder;
     border: .5px solid black;
     border-radius: 10px;
+}
+
+.submit input:hover{
+    cursor: pointer;
 }
 
 .register{
     margin-top: 20px;
     display: flex;
     margin-left: 20%;
+
 }
 
 .register a{
     margin-left: 10px;
     text-decoration: none;
+    color: white;
 }

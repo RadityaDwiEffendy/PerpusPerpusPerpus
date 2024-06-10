@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+.buku{
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.isi{
+    width: 85%;
+    height: 90vh;
+    background-color: white;
+    overflow-y: scroll;
+    display: flex;
+}
+
+.buku-buku{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+.dalam{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.dalam h1{
+    font-size: 15px;
+}
+
+
+.isi-buku{
+    width: 250px;
+    height: 250px;;
+    margin-left: 40px;
+    margin-top: 40px;
+    background-color: #F0F0F0;
+
+}
+
+.isi-buku:hover{
+    background-color: #006AFA;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.isi-buku:hover p {
+    display: block;
+    color: white; /* Mengubah warna teks menjadi putih */
+    font-size: 16px; /* Mengatur ukuran font menjadi 16px */
+}
+
+
+
+
+
+.dalam-hov{
+    margin-top: 70px;
+}
+.dalam-hov p{
+    margin-top: 70px;
+    font-size: 15px;
+    display: none;
+}
+
+.isi-buku p{
+    margin-top: 50px;
+    display: none;
+}
+
+
+  
+  .dropdown-content{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    border: 1px solid gray;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.dropdown-content a{
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 20px; 
+    width: 100%;
+    border: 1px solid beige;
+    color: black;
+    font-weight: bold;
+}
+
+
+.container{
+    width: 100%;
+    height: 90vh;
+}
+
+.buat{
+    width: 100%;
+    height: 100px;
+    background-color: #F0F0F0  ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit button{
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    color: white;
+    font-weight: bolder;
+    background-color: #006769;
+    border: none;
+    border-bottom-right-radius: 10px;
+}
+
+.edit button:hover{
+    cursor: pointer;
+    background-color: #00a5a8;
+}
+
+.dlm{
+    width: 85%;
+    background-color: white;
+    height: 80px;
+}
+
+.buat button{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 150px;
+    height: 40px;
+    background-color: #006769;
+    color: white;
+    border: #006769 1px solid;
+    border-radius: 10px;
+}
+.buat button:hover{
+
+    background-color: #40A578;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.isibuk{
+    width: 100%;
+    height: auto;
+    background-color: #F0F0F0  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lebihisi{
+    padding-bottom: 20px;
+    width: 85%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+.bukunya{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 243px;
+    height: 243px;
+    background-color: rgb(10, 23, 111);
+    position: relative;
+}
+/*  */
+
+
+
+.bukunya:hover {
+    background-color: #006AFA;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bukunya:hover .judull{
+    color: white;
+    display: block;
+}
+
+.bukunya:hover .desc {
+    display: block;
+}
+
+.bukunya:hover img {
+    display: none;
+}
+
+.desc {
+    display: none; 
+}
+
+.desc p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+
+/*  */
+
+.bukunya img{
+    width: 243px;
+    height: 243px;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+
+}
+
+
+
+.judull{
+    display: none;
+    margin-top: 20px;
+    font-size: 17px;
+    color: black;
+    position: absolute;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.desc{
+    margin-left: 20px;
+    margin-top: 100px;
+    position: absolute;
+    width: 200px;
+    color: white;
+}
+
+.bukunya input{
+    border-radius: 10px;
+    margin-top: 200px;
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    margin-left: 70px;
+}
+
+.bukunya input:hover{
+    cursor: pointer;
+    background-color: rgb(154, 4, 4);
+}

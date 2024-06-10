@@ -21,6 +21,10 @@ class CreateBooksTable extends Migration
             $table->text('deskripsi');
             $table->timestamps();
             $table->text('url')->nullable();
+            $table->text('paragraf1');
+            $table->text('paragraf2')->nullable();
+            $table->text('paragraf3')->nullable();
+            $table->text('paragraf4')->nullable();
         });
     }
 

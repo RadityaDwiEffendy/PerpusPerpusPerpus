@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+.isibuk{
+    width: 100%;
+    height: auto;
+    background-color: #F0F0F0  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lebihisi{
+    width: 85%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.containig table{
+    width: 100%;
+}
+
+.print{
+    position: absolute;
+    background-color: rgb(47, 47, 255);
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70%;
+    margin-top: 10px;
+
+}
+
+.print a{
+    color: white;
+    text-decoration: none;
+}
+
+.containig h1{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+}
+.content-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: .9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr{
+    background-color: #009897;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    
+}
+
+tr td a{
+    text-decoration: none;
+    color: #009897;
+}
+
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+
+}
+
+.content-table th:nth-child(3),
+.content-table td:nth-child(3) {
+    width: 200px; 
+}
+
+
+.content-table tbody tr{
+    border-bottom:1px solid #dddddd ;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    color: #009897;
+    font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #009897;
+}
+
+.content-table tbody tr.active-row{
+
+}
+
+.roboto-regular {
+
+  }
+  

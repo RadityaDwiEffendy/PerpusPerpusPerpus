@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use GuzzleHttp\RetryMiddleware;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -19,6 +20,13 @@ class Siswas extends Authenticatable
     ];
 
     protected $attributes = [
-        'role_id' => 2
+        'role_id' => 3
     ];
+
+
+    public function peminjamans()
+    {
+        return $this->hasMany(Peminjaman::class, 'siswa_id');
+    }
+
 }

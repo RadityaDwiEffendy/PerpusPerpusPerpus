@@ -21,28 +21,28 @@
             </div>
 
             <div class="form">
-                <div class="nama">
-                    <p>Nama lengkap : </p>
-                    <h4>{{ $nama_lengkap }}</h4>
-                </div>
-                <div class="nama">
-                    <p>username : </p>
-                    <h4>{{ session('username') }}</h4>
-                </div>
-                <div class="nama">
-                    <p>Password : </p>
-                    <h4>{{ session('password') }}</h4>
+                <div class="sss">
+                    <div class="nama">
+                        <p>Nama lengkap : </p>
+                        <h4>{{ $nama_lengkap }}</h4>
+                    </div>
+                    <div class="nama">
+                        <p>username : </p>
+                        <h4>{{ session('username') }}</h4>
+                    </div>
+                    <div class="nama">
+                        <p>Password : </p>
+                        <h4>{{ session('password') }}</h4>
+                    </div>
+
                 </div>
             </div>
 
             <div class="logout">
                 <button onclick="logout()">
-                    <p>Logout</p>
+                    <p >Logout</p>
                 </button>
 
-                <button>
-                    <p>Edit</p>
-                </button>
             </div>
         </div>
     </div>

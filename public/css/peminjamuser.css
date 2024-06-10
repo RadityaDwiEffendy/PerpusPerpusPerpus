@@ -1,0 +1,315 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+
+
+.nav-link {
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.rat{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 30px;
+    display: flex;
+
+}
+
+.rat p:nth-child(2){
+    margin-left: 10px;
+}
+
+.pending{
+    background-color: #624E3C   ;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #412624;
+}
+.pending1{
+    background-color: #C9B88B   ;
+    width: 98.5%;
+    justify-content: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: #8B785B;
+}
+.pending2{
+    padding-bottom: 10px;
+    background-color: #C9B88B   ;
+    width: 98.5%;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+    border: 2px solid #412624;
+}
+
+.judull{
+    margin-top: 20px;
+    font-size: 17px;
+    color: white;
+    position: absolute;
+    margin-left: 20px;
+    font-weight: bold;
+    display: none;
+    width: 250px;
+}
+
+.ulas{
+    display: block;
+    position: absolute;
+    color: #412624;
+
+}
+
+.ulas button{
+    width: 80px;
+    height: 25px;
+    background-color: #8B785B;
+    font-weight: bolder;
+    border: none;
+    border-bottom-right-radius: 10px;
+}
+
+.ulas button:hover{
+    cursor: pointer;
+    background-color: #654F3F;
+}
+
+.ulas button a{
+    text-decoration: none;
+    color: #412624;
+}
+
+.bukunya:hover {
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bukunya:hover .judull{
+    color: white;
+    display: block;
+}
+
+.bukunya:hover .desc {
+    display: block;
+}
+
+.bukunya:hover img {
+    display: none;
+}
+
+.desc {
+    display: none; 
+}
+
+.desc{
+    margin-left: 20px;
+    margin-top: 100px;
+    position: absolute;
+    width: 200px;
+    color: white;
+}
+
+.desc p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+
+.bukunya{
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 243px;
+    height: 243px;
+    background-color: blue;
+}
+
+
+.bukunya img{
+    width: 243px;
+    height: 243px;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+
+}
+.buku img{
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    background-color: #654F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.nav-link {
+    height: 60px;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+
+    margin-left: 50px;
+}
+
+
+.gambar {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+
+
+  .profile {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+/* 
+.isibuk{
+    width: 100%;
+    height: 90vh;
+    background-color: #F0F0F0  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.isibuk{
+    padding-top: 60px;
+    width: 100%;
+    height: auto;
+    background-color: #412624  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lebihisi{
+    width: 85%;
+    height: auto;
+    background-color: #BAAA80;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 10px solid #8B785B;
+    border-right: 10px solid #8b785b;
+    justify-content: center ;
+}
+
+.containig table{
+
+    width: 100%;
+}
+
+.containig{
+    padding-bottom: 30px;
+    padding-top: 20px;
+    width: 790px;
+
+
+}
+
+
+.containig h1{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+}
+.content-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: .9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+    background-color: aqua;
+}
+
+.content-table thead tr{
+    background-color: #009897;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    
+}
+
+
+
+tr td a{
+    text-decoration: none;
+    color: #009897;
+}
+
+
+
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+
+}
+
+.content-table th:nth-child(3),
+.content-table td:nth-child(3) {
+    width: 200px; 
+}
+
+
+.content-table tbody tr{
+    border-bottom:1px solid #dddddd ;
+    background-color: white;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #dddddd;
+    color: #009897;
+    font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #009897;
+}
+
+

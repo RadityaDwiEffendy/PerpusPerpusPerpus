@@ -13,50 +13,62 @@
     <div class="container">
         <div class="profile">
             <div class="prof-anda">
-                <p>Edit </p>
+                <p>Pinjam Buku </p>
             </div>
-
-
+    
             <div class="foro">
-                <form method="POST" action="{{ route('admin.update', ['siswa'=>$siswa->id]) }}">
+                @if(!$errors->isEmpty())
+                    {{ $errors }}
+                @endif
+                <form method="POST" action="{{ route('layout.storee', ['Book' => $book_id, 'book_id' => $book_id]) }}">
+
+                    
+                    
+
                     @csrf
-                    @method('PUT')
     
                     <div class="namadpn">
-                        <label for="">ID : </label>
+                        <label for="">ID Pengguna : </label>
                         <div class="id">
-                            <input type="text" name="id" value="{{ $siswa->id }}">
+                            <input type="text" name="siswa_id" value="{{ auth()->id() }}" readonly>
                         </div>
                     </div>
     
                     <div class="namadpn">
-                        <label for="">Nama : </label>
+                        <label for="">Judul Buku : </label>
                         <div class="namadepan">
-                            <input type="text" name="nama_depan" value="{{ $siswa->nama_depan }}">
+                            <input type="text" name="book_id" value="{{ $book->id }}" readonly>
+                        </div>
+                    </div>
+    
+                    <div class="namadpn">
+                        <label for="">Tanggal Pengambilan : </label>
+                        <div class="namadepan">
+                            <input name="tanggal_peminjaman" type="text" value="{{ now()->toDateString() }}">
                         </div>
                     </div>
                     <div class="namadpn">
-                        <label for="">Password : </label>
-                        <div class="pasport">
-                            <input type="text" name="password" value="{{ $siswa->password }}">
+                        <label for="">Tanggal pengembalian : </label>
+                        <div class="namadepan">
+                            <input name="tanggal_pengembalian" type="text" value="{{  now()->addDays(7)->toDateString() }}">
                         </div>
                     </div>
-
-                    <div class="logout">
-
-
-                        <input type="submit" value="Update">
-        
-        
+    
+                    <div class="namadpn">
+                        <label for="">Status : </label>
+                        <div class="namadepan">
+                            <input name="status" type="text" value="pending" readonly>
+                        </div>
                     </div>
     
-    
+                    <div class="logout">
+                        <input type="submit" value="Pinjam">
+                    </div>
                 </form>
             </div>
-
-
         </div>
     </div>
+    
 
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

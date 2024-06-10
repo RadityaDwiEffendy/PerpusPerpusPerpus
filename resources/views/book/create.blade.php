@@ -49,6 +49,30 @@
                             <input type="text" id="url" name="url"><br>
                         </div>
                     </div>
+                    <div class="namadpn1">
+                        <label for="">Paragraf 1 : </label>
+                        <div class="namadepan1">
+                            <textarea name="paragraf1" id="paragraf1"></textarea>
+                        </div>
+                    </div>
+                    <div class="namadpn1">
+                        <label for="">Paragraf 2 : </label>
+                        <div class="namadepan1">
+                            <textarea name="paragraf2" id="paragraf2"></textarea>
+                        </div>
+                    </div>
+                    <div class="namadpn1">
+                        <label for="">Paragraf 3 : </label>
+                        <div class="namadepan1">
+                            <textarea name="paragraf3" id="paragraf3"></textarea>
+                        </div>
+                    </div>
+                    <div class="namadpn1">
+                        <label for="">Paragraf 4 : </label>
+                        <div class="namadepan1">
+                            <textarea name="paragraf4" id="paragraf4"></textarea>
+                        </div>
+                    </div>
                     
 
                     <div class="logout">

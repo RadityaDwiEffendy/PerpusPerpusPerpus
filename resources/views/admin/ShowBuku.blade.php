@@ -8,30 +8,10 @@
     <link rel="stylesheet" href="{{ asset('css/showBuku.css') }}">
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-link">
-            <a href="{{ route('admin.e-book') }}">E-Book</a>
-            <a style="color: rgb(226, 226, 226)" href="{{ route('admin.akun') }}">Akun</a>
-            <a href="">Sedang Diminta</a>
-        </div>
+    
 
-        <button onclick="adminprof()" class="profile">
-            <div class="gambar">
-
-            </div>
-
-
-            <ul>
-                <p>Admin</p>
-            </ul>
-        </button>
-
-
-
-
-
-    </div>
-
+    @extends('admin.adminNavbar')
+    @section('kontent')
     <div class="isibuk">
         <div class="lebihisi">
 
@@ -55,17 +35,23 @@
             <div class="buat">
                 <div class="btnn">
                     <button onclick="setting('{{ $book->url }}')">
+                        <p>Download</p>
+                    </button>
+                    <button onclick="EditBukuPengaturan(this)" data-book-id="{{ $book->id }}">
                         <p>Baca</p>
                     </button>
-                    <button onclick="setting('{{ $book->url }}')">
-                        <p>Edit</p>
-                    </button>
+
 
                 </div>
             </div>
         </div>
     </div>
+        
+    @endsection
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+    </script>
 </body>
 </html>

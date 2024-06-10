@@ -11,7 +11,7 @@
     <div class="container">
         <div class="isi">
             <div class="dalam">
-                <h1>Register </h1>
+                <h1 style="color: white">Register </h1>
                 <form method="POST" action="{{ route('layout.store') }}">
                     @csrf
                     @method('post')
@@ -21,13 +21,13 @@
                         <input name="nama_belakang" placeholder="nama belakang" type="text">
                     </div>
                     <div class="ussername">
-                        <p>Ussername</p>
+                        <p style="color: white">Ussername</p>
                         <input name="username" placeholder="username" type="text">
 
                     </div>
     
                     <div class="pass">
-                        <p>Password</p>
+                        <p style="color: white" >Password</p>
                         <input name="password" placeholder="Password" type="password">
                     </div>
                     <div class="submit">
@@ -37,7 +37,7 @@
                 </form>
 
                 <div class="register">
-                    <p>sudah punya akun?</p>
+                    <p style="color: white;">sudah punya akun?</p>
                     <a href="{{ route('layout.login') }}">login</a>
                 </div>
             </div>

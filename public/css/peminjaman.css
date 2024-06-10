@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 120vh;
+    background-color: #412624  ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile{
+    width: 50%;
+    height: 105vh;
+    background-color: #c9b88b;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-radius: 20px;
+}
+
+.prof-anda{
+    width: 100%;
+    height: 50px;
+    background-color: #8B785B;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.prof-anda p{
+    color: white;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.nama{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 18px;
+
+    display: flex;
+}
+
+.nama p{
+    font-weight: bolder;
+}
+
+.fotoprof{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotonya{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: rgb(203, 203, 203);
+}
+
+
+.nama h4{
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+
+button{
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(28, 138, 255);
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(77, 163, 255);
+}
+
+
+.logout{
+    display: flex;
+}
+
+.namadpn{
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    margin-left: 40px;
+    
+}
+
+.namadpn .id input{
+    background-color: rgb(208, 208, 208);
+}
+
+.namadpn input{
+    width: 280px;
+    height:35px;
+    padding-left: 10px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.logout input{
+    background-color: #8B785B;
+    width: 150px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 100px;
+
+}
+
+.foro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout:hover input{
+    transition: 0.5s;
+    background-color: #412624;;
+    cursor: pointer;
+}
+

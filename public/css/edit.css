@@ -106,6 +106,10 @@ button:hover{
     
 }
 
+.namadpn .id input{
+    background-color: rgb(208, 208, 208);
+}
+
 .namadpn input{
     width: 280px;
     height:35px;

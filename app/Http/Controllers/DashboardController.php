@@ -16,6 +16,7 @@ class DashboardController extends Controller
      
        $bookCount = Book::count();
        $totalAccounts = Siswas::count();
+       
 
          return view('admin.dashboard', ['totalAccounts' => $totalAccounts, 'bookCount' => $bookCount]);
 

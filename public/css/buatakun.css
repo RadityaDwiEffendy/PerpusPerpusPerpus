@@ -77,16 +77,20 @@
 }
 
 .submit input{
-    background-color: #215D99;
+    background-color: rgb(37, 124, 255);
     margin-top: 20px;
     margin-left: 15px;
     width: 80%;
     height: 40px;
     color: white;
-    border: .5px solid black;
+
+    border:  none;
     border-radius: 10px;
 }
 
+input:hover{
+    cursor: pointer;
+}
 .register{
     margin-top: 20px;
     display: flex;

@@ -6,24 +6,25 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-color: rgb(238, 238, 238);
+    background-color: #412624  ;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .profile{
     width: 50%;
     height: 80vh;
-    background-color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+
+    border-radius: 20px;
+    background-color: #c9b88b;
 }
 
 .prof-anda{
     width: 100%;
     height: 50px;
-    background-color: rgb(37, 124, 255);
+    background-color: #8B785B;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     display: flex;
@@ -88,7 +89,7 @@ button{
 
 button:hover{
     cursor: pointer;
-    background-color: rgb(255, 65, 65);
+    background-color: #8B785B;
 }
 
 
@@ -96,18 +97,23 @@ button:hover{
     display: flex;
 }
 
-button:nth-child(2) {
-    background-color: rgb(28, 138, 255);
+button {
+    background-color: #8B785B;
 }
 
-button:nth-child(2):hover {
-    background-color: rgb(77, 163, 255);
-}
 
 
 .form{
-    background-color: aliceblue;
-    border-top: 1px solid rgb(124, 124, 124);
-    border-bottom: 1px solid rgb(124, 124, 124);
-    
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+
+}
+.sss{
+    width: 90%;
+    height: 100px;
+    background-color: #BAAA80;
+    border-radius: 10px;
+    border: 3px solid #412624;
 }

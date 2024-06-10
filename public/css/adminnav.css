@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #215D99;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.nav-link {
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #215D99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.nav-link {
+    height: 60px;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+
+    margin-left: 50px;
+}
+
+
+.hh {
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+.buku {
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.isi {
+    width: 85%;
+    height: 90vh;
+    background-color: white;
+
+    display: flex;
+}
+
+.buku-buku {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+.dalam {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.dalam h1 {
+    font-size: 15px;
+}
+
+
+.isi-buku {
+    width: 250px;
+    height: 250px;
+    ;
+    margin-left: 40px;
+    margin-top: 40px;
+    background-color: #F0F0F0;
+
+}
+
+.isi-buku:hover {
+    background-color: #006AFA;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.isi-buku:hover p {
+    display: block;
+    color: white;
+    /* Mengubah warna teks menjadi putih */
+    font-size: 16px;
+    /* Mengatur ukuran font menjadi 16px */
+}
+
+
+
+
+
+.dalam-hov {
+    margin-top: 70px;
+}
+
+.dalam-hov p {
+    margin-top: 70px;
+    font-size: 15px;
+    display: none;
+}
+
+.isi-buku p {
+    margin-top: 50px;
+    display: none;
+}
+
+.profile {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.gambar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+}

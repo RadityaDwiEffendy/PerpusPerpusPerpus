@@ -33,7 +33,7 @@
                     </div>
 
     
-                    <div class="pass">
+                    <div class="pass {{ session('error')? 'error-input' : '' }}">
                         <p>Password</p>
                         <input name="password" placeholder="Password" type="password">
                     </div>
@@ -44,7 +44,7 @@
                 </form>
 
                 <div class="register">
-                    <p>belum punya akun?</p>
+                    <p style="color: white;">belum punya akun?</p>
                     <a href="{{ route('layout.register') }}">Register</a>
                 </div>
             </div>

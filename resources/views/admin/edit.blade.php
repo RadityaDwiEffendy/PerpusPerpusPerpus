@@ -25,7 +25,7 @@
                     <div class="namadpn">
                         <label for="">ID : </label>
                         <div class="id">
-                            <input type="text" name="id" value="{{ $siswa->id }}">
+                            <input readonly disabled type="text" name="id" value="{{ $siswa->id }}" >
                         </div>
                     </div>
     

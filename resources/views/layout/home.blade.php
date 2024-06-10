@@ -10,25 +10,12 @@
 
 <body>
 
-    <div class="navbar">
-        <div class="nav-link">
-            <a style="color: rgb(180, 180, 180)" href="">Buku</a>
-            <a href="{{ route('layout.favorit') }}">Favorit</a>
-            <a href="">Sedang Diminta</a>
-            <a href="">Bantuan</a>
-        </div>
-
-        <button onclick="profile()" class="profile">
-            <div class="gambar">
-            </div>
-            <ul>
-                <p>{{ $nama_lengkap }}</p>
-            </ul>
-        </button>
-    </div>
+    
 
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+    @extends('layout.navbar')
+    @section('content')
     <div class="isibuk">
         <div class="lebihisi">
             @foreach ($books as $book)
@@ -54,6 +41,7 @@
 
         </div>
     </div>
+    @endsection
 
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

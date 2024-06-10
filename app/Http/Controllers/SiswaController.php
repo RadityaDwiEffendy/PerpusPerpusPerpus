@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Peminjaman;
 use App\Models\Siswas;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Contracts\Session\Session;
@@ -17,6 +18,7 @@ class SiswaController extends Controller
     {
         return view('layout.login');
     }
+    
     
 
     public function buatakun(){
@@ -35,7 +37,7 @@ class SiswaController extends Controller
     {
         $siswa = Siswas::findOrFail($id);
         $siswa->delete();
-        return redirect(route('admin.akun'))->with("Success", "Siswa berhasil dihapus");
+        return redirect(route('admin.dashboard'))->with("Success", "Siswa berhasil dihapus");
     }
 
 
@@ -52,10 +54,17 @@ class SiswaController extends Controller
         return view('layout.register');
     }
 
-    public function akun()
+    public function dashboard()
     {
         $siswa = Siswas::all();
-        return view('admin.akun', ['siswa' => $siswa]);
+        $bookCount = Book::count();
+        $totalAccounts = Siswas::count();
+        $totalPeminjam = Peminjaman::where('status', 'pending')->count();
+        $totalDone = Peminjaman::where('status', 'dikembalikan')->count();
+ 
+          return view('admin.dashboard', ['totalDone'=>$totalDone, 'totalPeminjam'=>$totalPeminjam,'totalAccounts' => $totalAccounts, 'bookCount' => $bookCount, 'siswa' => $siswa]);
+
+
     }
 
 
@@ -106,15 +115,22 @@ class SiswaController extends Controller
 
     public function authenticate(Request $request)
     {
+        // $request->validate([
+        //     'username' => 'required',
+        //     'password' => 'required'
+        // ]);
+
         $credential = $request->only('username', 'password');
 
         $user = Siswas::where('username', $credential['username'])->first();
 
         if ($user && $credential['password'] == $user->password) {
+            session()->put('id', $user->id);
             session()->put('nama_depan', $user->nama_depan);
             session()->put('nama_belakang', $user->nama_belakang);
             session()->put('username', $user->username);
             session()->put('password', $user->password);
+            
             Auth::login($user);
             $request->session()->regenerate();
 
@@ -122,11 +138,25 @@ class SiswaController extends Controller
                 return redirect('/layout/home/admin');
             }
 
-            if (Auth::user()->role_id == 2) {
+            if(Auth::user()->role_id == 2){
+                return redirect('/layout/home/petugas');
+            }
+
+            if (Auth::user()->role_id == 3) {
                 return redirect('/layout/home');
             }
         }
 
         return redirect()->route('layout.login')->with('error', 'Username atau password salah');
     }
+
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('login');
+    }
+
+
 }
+

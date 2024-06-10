@@ -13,30 +13,8 @@
 
 <body>
 
-    <div class="navbar">
-        <div class="nav-link">
-            <a style="color: rgb(226, 226, 226)" href="">Dashboard</a>
-            <a href="{{ route('admin.e-book') }}">E-Book</a>
-            <a href="{{ route('admin.akun') }}">Akun</a>
-            <a href="">Sedang Diminta</a>
-        </div>
-
-        <button onclick="adminprof()" class="profile">
-            <div class="gambar">
-
-            </div>
-
-
-            <ul>
-                <p>Admin</p>
-            </ul>
-        </button>
-
-
-
-    </div>
-
-
+    @extends('admin.adminNavbar')
+    @section('kontent')
     <div class="container">
 
 
@@ -63,26 +41,87 @@
                         </div>
                         <div class="kotak">
                             <div class="isii">
-                                <p>Total buku</p>
-                                <div class="tt">
-                                    3
+                                <p>BELUM DI KONFIRMASI</p>
+                                <div class="ttl">
+                                    <h1>{{ $totalPeminjam }}</h1>
                                 </div>
                             </div>
                         </div>
                         <div class="kotak">
                             <div class="isii">
-                                <p>Total buku</p>
+                                <p>PINJAMAN SELESAI</p>
                                 <div class="ttl">
-                                    3
+                                    <h1>{{ $totalDone }}</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+
+
+                <div class="container">
+                    <div class="cret">
+                        <Button onclick="BuatAKun()">
+                            <p>Buat akun</p>
+                        </Button>
+                    </div>
+
+        
+
+                    <div class="containig">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Password</th>
+                                    <th>Created at</th>
+                                    <th>updated at</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            
+                            
+                                @foreach ($siswa as $item)
+                                    <tr>
+                                        <td>{{ $item->id }}</td>
+                                        <td>{{ $item->nama_depan }}</td>
+                                        <td>{{ $item->password }}</td>
+                                        <td>{{ $item->created_at }}</td>
+                                        <td>{{ $item->updated_at }}</td>
+                                        <td class="bbb">
+                                            <div class="bta">
+                                                <a href="{{ route('admin.edit',['siswa'=> $item->id]) }}">edit</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <form method="POST" action="{{ route('admin.destroy', ['siswa' => $item->id]) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="submit" value="Delete">
+                                            </form>
+                                        </td>
+                
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    
+            
+                </div>
+
+                
             </div>
         </div>
     </div>
+    @endsection
+
+
+    
 
 
     <script src="{{ asset('js/script.js') }}"></script>

@@ -18,7 +18,7 @@
             <a  style="color: rgb(226, 226, 226)" href="{{ route('admin.home') }}">Buku</a>
             <a  href="{{ route('admin.e-book') }}">E-Book</a>
             <a href="{{ route('admin.akun') }}">Akun</a>
-            <a href="">Sedang Diminta</a>
+            <a href="{{ route('admin.confrim') }}">Sedang Diminta</a>
         </div>
 
         <button class="profile">
